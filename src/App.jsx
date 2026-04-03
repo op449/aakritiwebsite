@@ -20,13 +20,13 @@ const InstagramIcon = () => (<svg width="16" height="16" viewBox="0 0 24 24" fil
 const TrustpilotIcon = () => (<svg viewBox="0 0 512 512" width="16" height="16" fill="#00b67a"><path d="M256,0C114.6,0,0,114.6,0,256s114.6,256,256,256s256-114.6,256-256S397.4,0,256,0z M353.6,350.2L256,290.5l-97.6,59.7l30-111.4l-88.7-72.2h112.5l33.8-109l33.8,109h112.5l-88.7,72.2L353.6,350.2z" /></svg>);
 
 const fadeInUp = {
-  hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.25, 0.1, 0.25, 1] } }
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: [0.25, 0.1, 0.25, 1] } }
 };
 
 const staggerChildren = {
   hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { staggerChildren: 0.2 } }
+  visible: { opacity: 1, transition: { staggerChildren: 0.1 } }
 };
 
 const RevealText = ({ text, delay = 0, onHover }) => {

@@ -1456,16 +1456,29 @@ body {
     text-align: center;
   }
 
+  .atelier-form {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+  }
+
   .form-row {
     display: flex !important;
     flex-direction: column !important;
     gap: 1.5rem !important;
-    align-items: center !important;
+    align-items: stretch !important;
     width: 100% !important;
   }
 
   .form-row>* {
     width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .atelier-form input,
+  .atelier-form textarea {
+    width: 100% !important;
+    box-sizing: border-box !important;
   }
 
   .btn-form-submit {
