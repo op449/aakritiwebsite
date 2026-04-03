@@ -1207,7 +1207,7 @@ body {
   .hero-split {
     display: flex !important;
     flex-direction: column !important;
-    gap: 1.5rem !important;
+    gap: 0.75rem !important;
     width: 100% !important;
   }
 
@@ -1236,9 +1236,9 @@ body {
   }
 
   .hero-large-image-wrapper {
-    height: 60vh !important;
+    height: 32vh !important;
     padding: 0 !important;
-    margin-bottom: 2.5rem !important;
+    margin-bottom: 0.75rem !important;
     display: block !important;
     position: relative !important;
   }
@@ -1247,12 +1247,14 @@ body {
     display: flex;
     justify-content: flex-start !important;
     width: 100%;
-    margin-top: 1.5rem !important;
+    margin-top: 1rem !important;
     margin-left: 0 !important;
   }
 
   .hero-large-image-wrapper {
-    height: 50vh;
+    height: 32vh !important;
+    width: 100% !important;
+    border-radius: 2rem !important;
   }
 
   .hero-image-badge {
@@ -1266,34 +1268,52 @@ body {
     padding: 0 1.5rem;
   }
 
+  .navbar {
+    padding: 1rem 0 !important;
+  }
+
+  .navbar .container {
+    padding: 0 1.5rem !important;
+  }
+
   .hero {
-    display: block !important;
-    padding-top: 180px !important;
-    padding-bottom: 60px !important;
-    min-height: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    padding-top: 50px !important;
+    padding-bottom: 20px !important;
+    min-height: 100svh !important;
+    height: 100svh !important;
+    overflow: hidden !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
   }
 
   .hero-title {
-    font-size: clamp(2rem, 8vw, 3rem);
-    margin: 0 0 1rem 0 !important;
+    font-size: clamp(1.6rem, 8vw, 2.2rem);
+    margin: 0 !important;
     text-align: left !important;
     line-height: 1.1 !important;
+    width: 100% !important;
   }
 
   .hero-description {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     line-height: 1.35;
     color: #444;
-    margin-bottom: 0.5rem !important;
-    max-width: 100%;
+    margin: 0 !important;
+    max-width: 100% !important;
     text-align: left !important;
+    width: 100% !important;
   }
 
   .hero-achievement {
-    font-size: 0.9rem !important;
-    margin-bottom: 1.5rem !important;
+    font-size: 0.8rem !important;
+    margin: 0 !important;
     text-align: left !important;
     max-width: 100% !important;
+    line-height: 1.3 !important;
+    width: 100% !important;
   }
 
   .data-col {

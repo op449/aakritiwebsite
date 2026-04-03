@@ -289,7 +289,6 @@ const Hero = ({ mouseX, mouseY, onHover, lenisRef }) => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.8 }}
-              style={{ fontSize: '0.9rem', opacity: 0.7, marginTop: '-1rem', marginBottom: '2rem', textTransform: 'lowercase' }}
             >
               from blank canvases to portfolio-ready masterpieces—we guide every step of their creative journey.
             </motion.p>
@@ -394,7 +393,7 @@ const AboutSection = ({ onHover, lenisRef }) => (
                 <span className="j-num">01</span>
                 <div className="j-content">
                   <h3>Artistic Journey</h3>
-                  <span className="j-date">(2018-Present)</span>
+                  <span className="j-date">(2026)</span>
                 </div>
                 <span className="j-company">6+ Years of Professional Art</span>
               </motion.div>
