@@ -147,7 +147,7 @@ body {
 
 /* Navbar */
 .navbar {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -635,17 +635,18 @@ body {
 }
 
 .j-img-box {
-  width: 80px;
-  height: 50px;
+  width: auto;
+  max-width: 140px;
+  height: 45px;
   border-radius: 8px;
-  overflow: hidden;
-  background: #eee;
+  overflow: visible;
+  background: transparent;
 }
 
 .j-img-box img {
-  width: 100%;
+  width: auto;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .j-company {
@@ -1281,7 +1282,7 @@ body {
     display: flex !important;
     flex-direction: column !important;
     justify-content: flex-start !important;
-    padding-top: 80px !important;
+    padding-top: 110px !important;
     padding-bottom: 40px !important;
     min-height: auto !important;
     height: auto !important;
@@ -1459,6 +1460,8 @@ body {
     display: flex !important;
     flex-direction: column !important;
     gap: 1.5rem !important;
+    align-items: center !important;
+    width: 100% !important;
   }
 
   .form-row>* {
@@ -1508,8 +1511,8 @@ body {
 }
 
 .hero-large-image-wrapper {
-  margin-top: -40px;
-  /* Moves photo up on mobile if it matches the parent class */
+  margin-top: 0;
+  /* Removed negative margin to prevent logo overlap */
 }
 
 .form-header {
