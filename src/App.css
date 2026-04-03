@@ -1252,9 +1252,10 @@ body {
   }
 
   .hero-large-image-wrapper {
-    height: 32vh !important;
+    height: 28vh !important;
     width: 100% !important;
     border-radius: 2rem !important;
+    margin-bottom: 0.5rem !important;
   }
 
   .hero-image-badge {
@@ -1269,7 +1270,7 @@ body {
   }
 
   .navbar {
-    padding: 1rem 0 !important;
+    padding: 1.5rem 0 !important;
   }
 
   .navbar .container {
@@ -1279,9 +1280,9 @@ body {
   .hero {
     display: flex !important;
     flex-direction: column !important;
-    justify-content: flex-start !important;
-    padding-top: 50px !important;
-    padding-bottom: 20px !important;
+    justify-content: space-between !important;
+    padding-top: 140px !important;
+    padding-bottom: 30px !important;
     min-height: 100svh !important;
     height: 100svh !important;
     overflow: hidden !important;
