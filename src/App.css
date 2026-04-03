@@ -1207,7 +1207,7 @@ body {
   .hero-split {
     display: flex !important;
     flex-direction: column !important;
-    gap: 0.75rem !important;
+    gap: 1rem !important;
     width: 100% !important;
   }
 
@@ -1252,10 +1252,10 @@ body {
   }
 
   .hero-large-image-wrapper {
-    height: 28vh !important;
+    height: 70vh !important;
     width: 100% !important;
     border-radius: 2rem !important;
-    margin-bottom: 0.5rem !important;
+    margin-bottom: 1rem !important;
   }
 
   .hero-image-badge {
@@ -1280,14 +1280,15 @@ body {
   .hero {
     display: flex !important;
     flex-direction: column !important;
-    justify-content: space-between !important;
-    padding-top: 140px !important;
-    padding-bottom: 30px !important;
-    min-height: 100svh !important;
-    height: 100svh !important;
-    overflow: hidden !important;
+    justify-content: flex-start !important;
+    padding-top: 80px !important;
+    padding-bottom: 40px !important;
+    min-height: auto !important;
+    height: auto !important;
+    overflow: visible !important;
     width: 100% !important;
     box-sizing: border-box !important;
+    gap: 1.5rem !important;
   }
 
   .hero-title {
