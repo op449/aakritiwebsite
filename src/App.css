@@ -1207,28 +1207,40 @@ body {
   .hero-split {
     display: flex !important;
     flex-direction: column !important;
-    gap: 2rem !important;
+    gap: 1.5rem !important;
+    width: 100% !important;
+  }
+
+  .hero-image-col {
+    order: 1 !important;
+    width: 100% !important;
+    margin-bottom: 0 !important;
   }
 
   .hero-text-col {
     order: 2 !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
-    margin-left: 0 !important;
+    margin: 0 !important;
     text-align: left !important;
     display: flex !important;
     flex-direction: column !important;
     align-items: flex-start !important;
+    width: 100% !important;
   }
 
   .hero-image-col {
     order: 1 !important;
     width: 100% !important;
-    margin-bottom: 1rem !important;
+    margin-bottom: 0 !important;
   }
 
   .hero-large-image-wrapper {
-    height: 70vh !important;
+    height: 60vh !important;
+    padding: 0 !important;
+    margin-bottom: 2.5rem !important;
+    display: block !important;
+    position: relative !important;
   }
 
   .hero-cta-group {
@@ -1255,29 +1267,31 @@ body {
   }
 
   .hero {
-    padding-top: 70px;
-    padding-bottom: 40px;
-    min-height: auto;
+    display: block !important;
+    padding-top: 180px !important;
+    padding-bottom: 60px !important;
+    min-height: auto !important;
   }
 
   .hero-title {
     font-size: clamp(2rem, 8vw, 3rem);
-    margin-bottom: 0.75rem !important;
+    margin: 0 0 1rem 0 !important;
     text-align: left !important;
+    line-height: 1.1 !important;
   }
 
   .hero-description {
     font-size: 1.1rem;
-    line-height: 1.4;
+    line-height: 1.35;
     color: #444;
-    margin-bottom: 1rem !important;
+    margin-bottom: 0.5rem !important;
     max-width: 100%;
     text-align: left !important;
   }
 
   .hero-achievement {
     font-size: 0.9rem !important;
-    margin-bottom: 2rem !important;
+    margin-bottom: 1.5rem !important;
     text-align: left !important;
     max-width: 100% !important;
   }
