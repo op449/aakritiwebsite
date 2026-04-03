@@ -265,14 +265,9 @@ const Hero = ({ mouseX, mouseY, onHover, lenisRef }) => {
           <div className="hero-text-col" style={{ position: 'relative', zIndex: 20 }}>
             <motion.h1
               className="hero-title"
-              style={{ y: typeof window !== 'undefined' && window.innerWidth < 768 ? 0 : yParallax }}
             >
-              <span className="text-dark">
-                <RevealText text="Nurturing the Next" onHover={onHover} />
-              </span><br />
-              <span className="text-dark">
-                <RevealText text="Generation of Artists" delay={0.4} onHover={onHover} />
-              </span>
+              <span className="text-dark">Nurturing the Next</span><br />
+              <span className="text-dark">Generation of Artists</span>
             </motion.h1>
 
             <motion.p

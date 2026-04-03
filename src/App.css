@@ -1222,7 +1222,10 @@ body {
     order: 2 !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
-    margin: 0 !important;
+    margin-top: 2.5rem !important;
+    margin-bottom: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
     text-align: left !important;
     display: flex !important;
     flex-direction: column !important;
@@ -1253,17 +1256,18 @@ body {
   }
 
   .hero-large-image-wrapper {
-    height: 70vh !important;
+    height: 58vh !important;
     width: 100% !important;
     border-radius: 2rem !important;
-    margin-bottom: 1rem !important;
+    margin-bottom: 2rem !important;
   }
 
   .hero-image-badge {
-    left: 1rem;
-    bottom: 1rem;
+    left: 1.5rem;
+    bottom: 2rem;
     padding: 0.75rem 1.25rem;
     gap: 1rem;
+    z-index: 100 !important;
   }
 
   .container {
@@ -1282,14 +1286,14 @@ body {
     display: flex !important;
     flex-direction: column !important;
     justify-content: flex-start !important;
-    padding-top: 110px !important;
-    padding-bottom: 40px !important;
+    padding-top: 140px !important;
+    padding-bottom: 60px !important;
     min-height: auto !important;
     height: auto !important;
     overflow: visible !important;
     width: 100% !important;
     box-sizing: border-box !important;
-    gap: 1.5rem !important;
+    gap: 4rem !important;
   }
 
   .hero-title {
@@ -1450,35 +1454,47 @@ body {
   }
 
   .pretty-form-container {
-    padding: 2.5rem 1.5rem;
+    padding: 2rem 1.25rem !important;
     border-radius: 1.5rem;
     margin: 3rem 0;
     text-align: center;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
   }
 
   .atelier-form {
     display: flex !important;
     flex-direction: column !important;
-    gap: 1.5rem !important;
+    gap: 1.25rem !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
   }
 
   .form-row {
     display: flex !important;
     flex-direction: column !important;
-    gap: 1.5rem !important;
-    align-items: stretch !important;
+    gap: 1.25rem !important;
     width: 100% !important;
+    grid-template-columns: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
   }
 
   .form-row>* {
     width: 100% !important;
     margin: 0 !important;
+    box-sizing: border-box !important;
   }
 
   .atelier-form input,
   .atelier-form textarea {
     width: 100% !important;
+    max-width: 100% !important;
     box-sizing: border-box !important;
+    margin: 0 !important;
+    font-size: 1rem !important;
+    padding: 1.25rem !important;
   }
 
   .btn-form-submit {
