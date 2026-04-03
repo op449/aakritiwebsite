@@ -260,7 +260,7 @@ const Hero = ({ mouseX, mouseY, onHover, lenisRef }) => {
 
   return (
     <section className="hero" style={{ overflow: 'hidden' }}>
-      <div style={{ position: 'relative', zIndex: 1, width: '100%' }}>
+      <div className="container" style={{ position: 'relative', zIndex: 11 }}>
         <div className="hero-split" style={{ position: 'relative', zIndex: 10 }}>
           <div className="hero-text-col" style={{ position: 'relative', zIndex: 20 }}>
             <motion.h1
@@ -274,6 +274,25 @@ const Hero = ({ mouseX, mouseY, onHover, lenisRef }) => {
                 <RevealText text="Generation of Artists" delay={0.4} onHover={onHover} />
               </span>
             </motion.h1>
+
+            <motion.p
+              className="hero-description"
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.6 }}
+            >
+              We empower children to express their unique vision through personalized 1-on-1 art mentorship.
+            </motion.p>
+
+            <motion.p
+              className="hero-achievement"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.8 }}
+              style={{ fontSize: '0.9rem', opacity: 0.7, marginTop: '-1rem', marginBottom: '2rem', textTransform: 'lowercase' }}
+            >
+              from blank canvases to portfolio-ready masterpieces—we guide every step of their creative journey.
+            </motion.p>
 
             <motion.div
               className="hero-cta-group"
