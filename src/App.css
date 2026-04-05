@@ -1661,3 +1661,177 @@ body {
   font-weight: 800;
   font-size: 1.2rem;
 }
+/* How It Works Section */
+.how-section {
+  padding: 10rem 0;
+  background: var(--bg);
+  position: relative;
+  overflow: hidden;
+}
+
+.how-header {
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+.timeline-container {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.timeline-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: rgba(74, 78, 215, 0.1);
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 50%;
+  position: relative;
+  margin-bottom: 4rem;
+  width: 100%;
+}
+
+.timeline-item.right {
+  justify-content: flex-start;
+  padding-right: 0;
+  padding-left: 50%;
+}
+
+.timeline-dot {
+  position: absolute;
+  top: 2rem;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border: 2px solid var(--accent-purple);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dot-inner {
+  width: 8px;
+  height: 8px;
+  background: var(--accent-purple);
+  border-radius: 50%;
+}
+
+.timeline-card {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(20px);
+  padding: 2.5rem;
+  border-radius: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.03);
+  width: 90%;
+  max-width: 400px;
+  transition: all 0.4s ease;
+}
+
+.timeline-item.left .timeline-card {
+  margin-right: 50px;
+}
+
+.timeline-item.right .timeline-card {
+  margin-left: 50px;
+}
+
+.step-icon {
+  width: 50px;
+  height: 50px;
+  background: var(--accent-purple);
+  color: #fff;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.timeline-card h4 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.timeline-card p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 2000;
+  text-decoration: none;
+}
+
+.wa-inner {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  background: #25D366;
+  color: #fff;
+  padding: 0.8rem 1.7rem;
+  border-radius: 99px;
+  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+  font-weight: 700;
+  font-size: 0.95rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Mobile Tweaks */
+@media (max-width: 768px) {
+  .how-section {
+    padding: 6rem 0;
+  }
+
+  .timeline-line {
+    left: 30px;
+  }
+
+  .timeline-item {
+    padding-left: 70px !important;
+    padding-right: 0 !important;
+    justify-content: flex-start !important;
+    margin-bottom: 2.5rem;
+  }
+
+  .timeline-item.left .timeline-card,
+  .timeline-item.right .timeline-card {
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .timeline-dot {
+    left: 30px;
+  }
+    
+  .whatsapp-float {
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+    
+  .wa-inner {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.85rem;
+  }
+}

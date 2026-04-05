@@ -1,13 +1,16 @@
 import React, { useEffect, useState, useRef } from 'react';
 import Lenis from 'lenis';
 import { motion, useScroll, useTransform, useMotionValue, useSpring, AnimatePresence } from 'framer-motion';
-import { ArrowRight, Phone, Star, MessageCircle } from 'lucide-react';
-import './App.css';
 import childPaintingImg from './assets/child_painting.png';
 import artKitImg from './assets/art_kit.png';
 import masterpieceImg from './assets/student_masterpiece.png';
 import instructorImg from './assets/instructor.jpg';
 import uidLogo from './assets/uid_logo.jpg';
+import workGeometry from './assets/work_geometry.jpg';
+import workTurtle from './assets/work_turtle.jpg';
+import workLimes from './assets/work_limes.jpg';
+import workStreet from './assets/work_street.jpg';
+import { ArrowRight, Phone, Star, MessageCircle, Search, Video, Users, Mail } from 'lucide-react';
 
 // SVGs
 const BehanceIcon = () => (<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22 7h-7v-2h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14h-8.027c.13 3.211 3.483 3.312 4.588 2.029h3.168zm-7.686-2.904h4.658c-.146-2.203-2.115-2.617-3.088-2.617-1.129 0-2.311.66-2.57 2.617zM6.92 11.196c1.17 0 2.217-.68 2.217-2.527 0-1.896-1.558-2.669-2.883-2.669h-5.254v13h6.143c1.55 0 2.85-.92 2.85-2.91 0-1.63-1.07-2.5-2.09-2.73 1.25-.21 2.45-1.07 2.45-2.85 0-1.84-1.29-2.68-2.84-2.68h-5.68v5.36h5.08zm-2.08-3.06h1.9c.74 0 1.2.33 1.2 1.05 0 .73-.46 1.06-1.2 1.06h-1.9v-2.11zm0 5.8h2.09c.8 0 1.34.36 1.34 1.16 0 .8-.54 1.15-1.34 1.15h-2.09v-2.31z" /></svg>);
@@ -423,6 +426,95 @@ const AboutSection = ({ onHover, lenisRef }) => (
     </div>
   </section>
 );
+const HowItWorks = ({ onHover }) => {
+  const steps = [
+    {
+      icon: <Search size={24} />,
+      title: "Discovery Session",
+      desc: "We schedule a dedicated 1-on-1 session to understand your child's creative background, goals, and preparation needs."
+    },
+    {
+      icon: <Video size={24} />,
+      title: "Intensive Mentorship",
+      desc: "Two weekly interactive learning sessions hosted via Google Meet, focusing on technical mastery and creative expression."
+    },
+    {
+      icon: <Users size={24} />,
+      title: "Family Feedback Loop",
+      desc: "A personalized monthly call with parents to discuss progress milestones and refine the artistic roadmap."
+    },
+    {
+      icon: <Mail size={24} />,
+      title: "Seamless Communication",
+      desc: "Stay connected 24/7 through professional company email for ongoing feedback and artistic guidance."
+    }
+  ];
+
+  return (
+    <section id="how-it-works" className="how-section">
+      <div className="container">
+        <motion.div
+          className="how-header"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeInUp}
+        >
+          <div className="pill-badge">The Roadmap</div>
+          <h2 className="section-h2">How it Works</h2>
+        </motion.div>
+
+        <div className="timeline-container">
+          <div className="timeline-line"></div>
+          {steps.map((step, i) => (
+            <motion.div
+              key={i}
+              className={`timeline-item ${i % 2 === 0 ? 'left' : 'right'}`}
+              initial={{ opacity: 0, x: i % 2 === 0 ? -30 : 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6, delay: i * 0.1 }}
+            >
+              <div className="timeline-dot">
+                <div className="dot-inner"></div>
+              </div>
+              <motion.div
+                className="timeline-card"
+                whileHover={{ y: -5 }}
+                onMouseEnter={() => onHover(true)}
+                onMouseLeave={() => onHover(false)}
+              >
+                <div className="step-icon">{step.icon}</div>
+                <h4>{step.title}</h4>
+                <p>{step.desc}</p>
+              </motion.div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const WhatsAppButton = ({ onHover }) => (
+  <motion.a
+    href="https://wa.me/917208155227"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="whatsapp-float"
+    initial={{ scale: 0, opacity: 0 }}
+    animate={{ scale: 1, opacity: 1 }}
+    whileHover={{ scale: 1.1 }}
+    whileTap={{ scale: 0.9 }}
+    onMouseEnter={() => onHover(true)}
+    onMouseLeave={() => onHover(false)}
+  >
+    <div className="wa-inner">
+      <MessageCircle size={24} fill="currentColor" />
+      <span>Talk on WhatsApp</span>
+    </div>
+  </motion.a>
+);
 
 const WorksSection = ({ onHover }) => {
   const { scrollYProgress } = useScroll();
@@ -448,9 +540,10 @@ const WorksSection = ({ onHover }) => {
 
         <div className="works-list">
           {[
-            { year: '2024', title: 'Ephemeral Dreams', sub: 'Conceptual Digital Painting', img: masterpieceImg, pY: parallaxY1, loading: 'lazy' },
-            { year: '2024', title: 'Urban Solace', sub: 'Fine Arts Exploration', img: childPaintingImg, pY: parallaxY2, loading: 'lazy' },
-            { year: '2023', title: 'Canvas of Thought', sub: 'Traditional Oil Series', img: artKitImg, pY: parallaxY3, loading: 'lazy' }
+            { year: '2024', title: 'Geometric Foundations', sub: 'Graphite Study of Form', img: workGeometry, pY: parallaxY1, loading: 'lazy' },
+            { year: '2024', title: 'Synchronized Breath', sub: 'Pencil Turtle Illustration', img: workTurtle, pY: parallaxY2, loading: 'lazy' },
+            { year: '2024', title: 'Citrus Vibrance', sub: 'Colored Pencil Study', img: workLimes, pY: parallaxY3, loading: 'lazy' },
+            { year: '2023', title: 'Cobblestone Echoes', sub: 'Watercolor Urban Landscape', img: workStreet, pY: parallaxY1, loading: 'lazy' }
           ].map((item, i) => (
             <motion.div
               key={i}
@@ -743,9 +836,11 @@ export default function App() {
           <Hero mouseX={smoothMouseX} mouseY={smoothMouseY} onHover={setIsHovering} lenisRef={lenisRef} />
           <AboutSection onHover={setIsHovering} lenisRef={lenisRef} />
           <WorksSection onHover={setIsHovering} />
+          <HowItWorks onHover={setIsHovering} />
           <TestimonialSection onHover={setIsHovering} />
         </main>
         <Footer onHover={setIsHovering} />
+        <WhatsAppButton onHover={setIsHovering} />
       </div>
     </div>
   );
