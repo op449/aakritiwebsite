@@ -1835,10 +1835,71 @@ body {
     right: 1.5rem;
   }
     
-  .wa-inner {
-    padding: 0.6rem 1.2rem;
-    font-size: 0.85rem;
+  .whatsapp-float {
+    bottom: 1rem;
+    right: 1rem;
   }
+    
+  .wa-inner {
+    padding: 0.75rem 1.4rem;
+    font-size: 0.9rem;
+    gap: 0.6rem;
+  }
+
+  .form-cta-row {
+    flex-direction: column;
+  }
+
+  .btn-free-call {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.form-cta-row-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.form-cta-row {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.form-cta-row .btn-form-submit,
+.btn-free-call {
+  height: 56px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 2.5rem !important;
+  margin: 0 !important;
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  border-radius: 99px !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+  box-sizing: border-box !important;
+  line-height: normal !important;
+}
+
+.btn-free-call {
+  border: 2px solid #25D366 !important;
+  color: #25D366 !important;
+  background: transparent !important;
+  transition: all 0.25s ease !important;
+  gap: 0.6rem;
+}
+
+.btn-free-call:hover {
+  background: #25D366;
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(37,211,102,0.3);
 }
 
 /* Enhanced Logo Branding */
@@ -1880,13 +1941,13 @@ body {
 .gallery-item {
   width: 100%;
   max-width: 1200px;
-  min-height: 100vh; /* Fits one artwork per screen on desktop */
+  min-height: 85vh;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 4rem 0;
+  padding: 1rem 0;
 }
 
 .gallery-image-wrapper {

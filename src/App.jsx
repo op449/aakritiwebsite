@@ -698,45 +698,44 @@ const Footer = ({ onHover }) => {
           </div>
 
           <form className="atelier-form">
-            <div className="form-row">
-              <input type="text" placeholder="Your Name" onMouseEnter={() => onHover(true)} onMouseLeave={() => onHover(false)} />
-              <input type="text" placeholder="Child's Name & Age" onMouseEnter={() => onHover(true)} onMouseLeave={() => onHover(false)} />
+            <input type="text" placeholder="Your Name" onMouseEnter={() => onHover(true)} onMouseLeave={() => onHover(false)} />
+            <input type="tel" placeholder="Your WhatsApp Number" onMouseEnter={() => onHover(true)} onMouseLeave={() => onHover(false)} />
+            <input type="text" placeholder="Child's Age (e.g. 8 years)" onMouseEnter={() => onHover(true)} onMouseLeave={() => onHover(false)} />
+
+            <p className="form-notice">Online 1-on-1 classes only. Limited availability.</p>
+
+            <div className="form-cta-row-wrapper">
+              <div className="form-cta-row">
+                <motion.button
+                  type="submit"
+                  className="btn-form-submit"
+                  onMouseEnter={() => onHover(true)}
+                  onMouseLeave={() => onHover(false)}
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  Request a Spot <ArrowRight size={16} />
+                </motion.button>
+                <motion.a
+                  href="https://wa.me/917208155227?text=Hi%20Aakriti!%20I%27d%20like%20to%20book%20a%20free%2015-min%20intro%20call%20for%20my%20child."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-free-call"
+                  onMouseEnter={() => onHover(true)}
+                  onMouseLeave={() => onHover(false)}
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  <MessageCircle size={16} /> Book Free 15-min Call
+                </motion.a>
+              </div>
             </div>
-            <input type="email" placeholder="Email Address" onMouseEnter={() => onHover(true)} onMouseLeave={() => onHover(false)} />
-            <textarea placeholder="Tell us about their artistic interests..." rows="4" onMouseEnter={() => onHover(true)} onMouseLeave={() => onHover(false)}></textarea>
-
-            <p className="form-notice">Online 1-on-1 classes only. No group sessions. Limited availability for Fall intake.</p>
-
-            <Magnetic>
-              <motion.button
-                type="submit"
-                className="btn-form-submit"
-                onMouseEnter={() => onHover(true)}
-                onMouseLeave={() => onHover(false)}
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                Request 1-on-1 Session <ArrowRight size={16} />
-              </motion.button>
-            </Magnetic>
           </form>
         </motion.div>
 
-        <motion.div
-          className="socials-box"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={fadeInUp}
-        >
-          <motion.a onMouseEnter={() => onHover(true)} onMouseLeave={() => onHover(false)} whileHover={{ y: -5, backgroundColor: 'rgba(255,255,255,0.1)' }} href="#"><DribbbleIcon /></motion.a>
-          <motion.a onMouseEnter={() => onHover(true)} onMouseLeave={() => onHover(false)} whileHover={{ y: -5, backgroundColor: 'rgba(255,255,255,0.1)' }} href="#"><LinkedinIcon /></motion.a>
-          <motion.a onMouseEnter={() => onHover(true)} onMouseLeave={() => onHover(false)} whileHover={{ y: -5, backgroundColor: 'rgba(255,255,255,0.1)' }} href="#"><TwitterIcon /></motion.a>
-          <motion.a onMouseEnter={() => onHover(true)} onMouseLeave={() => onHover(false)} whileHover={{ y: -5, backgroundColor: 'rgba(255,255,255,0.1)' }} href="#"><InstagramIcon /></motion.a>
-        </motion.div>
 
         <div className="footer-bottom">
-          <p>© 2024 Aakriti Singh Art Mentorship</p>
+          <p>© 2026 Aakriti Singh Art Mentorship</p>
           <div className="legal">
             <a href="#" onMouseEnter={() => onHover(true)} onMouseLeave={() => onHover(false)}>Studio Policy</a>
             <a href="#" onMouseEnter={() => onHover(true)} onMouseLeave={() => onHover(false)}>Scheduling</a>
