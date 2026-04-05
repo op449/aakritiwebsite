@@ -4,13 +4,14 @@ import { motion, useScroll, useTransform, useMotionValue, useSpring, AnimatePres
 import childPaintingImg from './assets/child_painting.png';
 import artKitImg from './assets/art_kit.png';
 import masterpieceImg from './assets/student_masterpiece.png';
-import instructorImg from './assets/instructor.jpg';
+import instructorImg from './assets/instructor_hq.jpg';
 import uidLogo from './assets/uid_logo.jpg';
 import workGeometry from './assets/work_geometry.jpg';
 import workTurtle from './assets/work_turtle.jpg';
 import workLimes from './assets/work_limes.jpg';
 import workStreet from './assets/work_street.jpg';
 import { ArrowRight, Phone, Star, MessageCircle, Search, Video, Users, Mail } from 'lucide-react';
+import './App.css';
 
 // SVGs
 const BehanceIcon = () => (<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22 7h-7v-2h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14h-8.027c.13 3.211 3.483 3.312 4.588 2.029h3.168zm-7.686-2.904h4.658c-.146-2.203-2.115-2.617-3.088-2.617-1.129 0-2.311.66-2.57 2.617zM6.92 11.196c1.17 0 2.217-.68 2.217-2.527 0-1.896-1.558-2.669-2.883-2.669h-5.254v13h6.143c1.55 0 2.85-.92 2.85-2.91 0-1.63-1.07-2.5-2.09-2.73 1.25-.21 2.45-1.07 2.45-2.85 0-1.84-1.29-2.68-2.84-2.68h-5.68v5.36h5.08zm-2.08-3.06h1.9c.74 0 1.2.33 1.2 1.05 0 .73-.46 1.06-1.2 1.06h-1.9v-2.11zm0 5.8h2.09c.8 0 1.34.36 1.34 1.16 0 .8-.54 1.15-1.34 1.15h-2.09v-2.31z" /></svg>);
@@ -242,7 +243,9 @@ const Navbar = ({ onHover }) => (
             <div className="circle circle-orange"></div>
             <div className="circle circle-purple"></div>
           </div>
-          <span>AS.</span>
+          <div className="logo-text-group">
+            <span className="logo-main text-dark">AS.</span>
+          </div>
         </motion.div>
       </Magnetic>
     </div>
@@ -442,11 +445,6 @@ const HowItWorks = ({ onHover }) => {
       icon: <Users size={24} />,
       title: "Family Feedback Loop",
       desc: "A personalized monthly call with parents to discuss progress milestones and refine the artistic roadmap."
-    },
-    {
-      icon: <Mail size={24} />,
-      title: "Seamless Communication",
-      desc: "Stay connected 24/7 through professional company email for ongoing feedback and artistic guidance."
     }
   ];
 
@@ -538,16 +536,16 @@ const WorksSection = ({ onHover }) => {
           <h2 className="section-h2">Personal Artist <br />Portfolio</h2>
         </motion.div>
 
-        <div className="works-list">
+        <div className="works-gallery">
           {[
-            { year: '2024', title: 'Geometric Foundations', sub: 'Graphite Study of Form', img: workGeometry, pY: parallaxY1, loading: 'lazy' },
-            { year: '2024', title: 'Synchronized Breath', sub: 'Pencil Turtle Illustration', img: workTurtle, pY: parallaxY2, loading: 'lazy' },
-            { year: '2024', title: 'Citrus Vibrance', sub: 'Colored Pencil Study', img: workLimes, pY: parallaxY3, loading: 'lazy' },
-            { year: '2023', title: 'Cobblestone Echoes', sub: 'Watercolor Urban Landscape', img: workStreet, pY: parallaxY1, loading: 'lazy' }
+            { year: '2024', title: 'Geometric Foundations', sub: 'Graphite Study of Form', img: workGeometry, loading: 'lazy' },
+            { year: '2024', title: 'Synchronized Breath', sub: 'Pencil Turtle Illustration', img: workTurtle, loading: 'lazy' },
+            { year: '2024', title: 'Citrus Vibrance', sub: 'Colored Pencil Study', img: workLimes, loading: 'lazy' },
+            { year: '2023', title: 'Cobblestone Echoes', sub: 'Watercolor Urban Landscape', img: workStreet, loading: 'lazy' }
           ].map((item, i) => (
             <motion.div
               key={i}
-              className="work-item"
+              className="gallery-item"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
@@ -555,14 +553,15 @@ const WorksSection = ({ onHover }) => {
               onMouseEnter={() => onHover(true)}
               onMouseLeave={() => onHover(false)}
             >
-              <div className="work-year">{item.year}</div>
-              <div className="work-title">{item.title}<br />{item.sub}</div>
-              <ImageCard
-                src={item.img}
-                title={item.title}
-                pY={item.pY}
-                onHover={onHover}
-              />
+              <div className="gallery-image-wrapper">
+                <img src={item.img} alt={item.title} className="gallery-img" />
+              </div>
+              <div className="gallery-caption">
+                <span className="gallery-year">{item.year}</span>
+                <span className="caption-divider">/</span>
+                <span className="gallery-title">{item.title}</span>
+                <span className="gallery-sub">{item.sub}</span>
+              </div>
             </motion.div>
           ))}
         </div>
